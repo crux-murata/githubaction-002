@@ -21,4 +21,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            echo 'GitHub Actions batch' > out.txt;
+            date;
             rsync -avzr --delete ./ /var/www/html/
